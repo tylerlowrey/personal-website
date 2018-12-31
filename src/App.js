@@ -1,28 +1,43 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import axios from 'axios';
+import Repo from './components/Repo';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+class App extends Component
+{
+
+    state = {
+        repos: []
+    };
+
+    fetchPublicRepos = () => {
+
+    };
+
+    componentDidMount()
+    {
+        axios.get("https://api.github.com/users/tylerlowrey/repos?type=owner&sort=update&access_token=cb8c993a419ffe6a30a36bb2fd04cdd1befce03c")
+            .then( response => {
+                this.setState({
+                   repos: response.data
+                });
+            })
+            .catch(error => {
+                console.log("BAD", error);
+            });
+    }
+
+    render()
+    {
+        let reposList = this.state.repos.map( (repo, index) => {
+            return <Repo key={repo.id} url={repo.html_url} description={repo.description} repoName={repo.name} />
+        });
+
+        return (
+            <div className="App">
+                {reposList}
+            </div>
+        );
+    }
 }
 
 export default App;
