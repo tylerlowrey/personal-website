@@ -9,20 +9,24 @@ class App extends Component
         repos: []
     };
 
-    fetchPublicRepos = () => {
-
+    /**
+     * Retrieves the list of public repos for the specified user, requires a valid access token that has permissions
+     * to grab the requested information. Returns a promise.
+     *
+     * @param username - The username, (https://github.com/USERNAME)
+     * @param api_key - The api key obtained from Github
+     */
+    fetchPublicRepos = (username, api_key) => {
+        return axios.get(`https://api.github.com/users/${username}/repos?type=owner&sort=update&access_token=${api_key}`);
     };
 
     componentDidMount()
     {
-        axios.get("https://api.github.com/users/tylerlowrey/repos?type=owner&sort=update&access_token=cb8c993a419ffe6a30a36bb2fd04cdd1befce03c")
-            .then( response => {
-                this.setState({
-                   repos: response.data
-                });
-            })
-            .catch(error => {
-                console.log("BAD", error);
+        this.fetchPublicRepos("tylerlowrey", "cb8c993a419ffe6a30a36bb2fd04cdd1befce03c")
+            .then(results => {
+               this.setState({
+                   repos: results.data
+               });
             });
     }
 
