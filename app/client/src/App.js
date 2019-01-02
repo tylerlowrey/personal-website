@@ -5,6 +5,8 @@ import Repo from './components/Repo';
 class App extends Component
 {
 
+    MAX_REPOS_TO_LIST = 10;
+
     state = {
         repos: []
     };
@@ -13,19 +15,19 @@ class App extends Component
      * Retrieves the list of public repos for the specified user, requires a valid access token that has permissions
      * to grab the requested information. Returns a promise.
      *
-     * @param username - The username, (https://github.com/USERNAME)
-     * @param api_key - The api key obtained from Github
+     * @param username - The username to grab public repos from, (https://github.com/USERNAME)
      */
-    fetchPublicRepos = () => {
-        return axios.get(`https://team283.org:8080/public_repos/tylerlowrey`);
+    fetchPublicRepos = (username) => {
+        return axios.get(`https://team283.org:8080/public_repos/${username}`);
     };
 
     componentDidMount()
     {
-        this.fetchPublicRepos()
+
+        this.fetchPublicRepos("tylerlowrey")
             .then(results => {
                 this.setState({
-                    repos: results.data
+                    repos: results.data.slice(0, this.MAX_REPOS_TO_LIST + 1)
                 });
             })
             .catch(error => {
@@ -43,6 +45,8 @@ class App extends Component
                     ]
                 })
             });
+
+
     }
 
     render()

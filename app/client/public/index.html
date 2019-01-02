@@ -1,35 +1,35 @@
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 
-  <title>Tyler Lowrey</title>
+    <title>Tyler Lowrey</title>
 
-  <!-- Font for headers -->
-  <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
-  <!-- Page styles -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <!-- Dynamic styles (media queries) -->
-  <link rel="stylesheet" type="text/css" href="css/dynamic.css">
+    <!-- Font for headers -->
+    <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
+    <!-- Page styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- Dynamic styles (media queries) -->
+    <link rel="stylesheet" type="text/css" href="css/dynamic.css">
 
-  <meta charset="UTF-8">
-  <meta name="description" content="Personal website of Tyler Lowrey, a computer programmer from South Carolina.">
-  <meta name="keywords" content="Tyler, Lowrey, Robotics, FRC, Clemson, Computer Science">
-  <meta name="author" content="Tyler Lowrey">
+    <meta charset="UTF-8">
+    <meta name="description" content="Personal website of Tyler Lowrey, a computer programmer from South Carolina.">
+    <meta name="keywords" content="Tyler, Lowrey, Robotics, FRC, Clemson, Computer Science">
+    <meta name="author" content="Tyler Lowrey">
 
 
 </head>
 
 <!-- Beginning of header -->
 <header>
-  <div id="header-text">tylerlowrey</div>
-  <nav>
-    <ul>
-      <li><a href="#about-me">About Me</a></li>
-      <li><a href="#github">My Github</a></li>
-      <li><a href="#resume">Resume</a></li>
-    </ul>
-  </nav>
+    <div id="header-text">tylerlowrey</div>
+    <nav>
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#github">My Github</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
 </header>
 <!-- End of header -->
 
@@ -37,199 +37,205 @@
 <!-- Beginning of main -->
 <main>
 
-  <!-- Beginning of main info (picture + job position)-->
-  <div id="main-info">
-    <div class="content-wrapper">
-      <div class="flex-parent">
-        <a id="top"></a>
-        <img id="photo-of-me" src="images/me.png" alt="A picture of Tyler Lowrey">
-        <div class="shaded-bg">
-          <h2>Tyler Lowrey</h2>
-          <p>(864) 430-9152 | tlowrey@g.clemson.edu</p>
-          <h3 style="color: #F66733;">IT Intern - Clemson University Watt Center</h3>
-          <h3 style="font-weight: normal;">Computer Science Undergraduate, Clemson University</h3>
-          <a href="https://linkedin.com/in/tylerlowrey">
-            <div class="linkedin-button">
-              <img src="images/linkedin.png" alt="LinkedIn logo (Link to my LinkedIn Account)">
-              <p>View my LinkedIn&reg; Account</p>
+    <!-- Beginning of main info (picture + job position)-->
+    <div id="main-info">
+        <div class="content-wrapper">
+            <div class="flex-parent">
+                <a id="top"></a>
+                <img id="photo-of-me" src="images/me.png" alt="A picture of Tyler Lowrey">
+                <div class="shaded-bg">
+                    <h2>Tyler Lowrey</h2>
+                    <p>(864) 430-9152 | tlowrey@g.clemson.edu</p>
+                    <h3 style="color: #F66733;">IT Intern - Clemson University Watt Center</h3>
+                    <h3 style="font-weight: normal;">Computer Science Undergraduate, Clemson University</h3>
+                    <a href="https://linkedin.com/in/tylerlowrey">
+                        <div class="linkedin-button">
+                            <img src="images/linkedin.png" alt="LinkedIn logo (Link to my LinkedIn Account)">
+                            <p>View my LinkedIn&reg; Account</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-          </a>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- End of main-info
+    <!-- End of main-info -->
 
-  <!-- Beginning of "pages" -->
-  <div class="info-block about-me">
-    <div class="content-wrapper">
-      <a id="about-me"></a>
-      <h1>About Me</h1>
-      <p>
-        Hello! My name is Tyler Lowrey. I am currently a Junior Computer
-        Science student at Clemson University.
-        I work on a multitude of programming projects, some of which can be
-        viewed on my github. I enjoy spending free time learning new skills in all sorts of subjects.
-        I am also a programming mentor for <i>FIRST</i> Robotics Competition
-        (FRC) Team 283, which is based out of Wade Hampton High School in Greenville,
-        South Carolina.
-      </p>
+    <!-- Beginning of "pages" -->
+    <div class="info-block about-me">
+        <div class="content-wrapper">
+            <a id="about-me"></a>
+            <h1>About Me</h1>
+            <p>
+                Hello! My name is Tyler Lowrey. I am currently a Junior Computer
+                Science student at Clemson University.
+                I work on a multitude of programming projects, some of which can be
+                viewed on my github (displayed below). I enjoy spending free time learning new skills in all sorts of subjects.
+                I am also a programming mentor for <i>FIRST</i> Robotics Competition
+                (FRC) Team 283, which is based out of Wade Hampton High School in Greenville,
+                South Carolina.
+            </p>
+        </div>
     </div>
-  </div>
 
-  <div class="spacer-orange git-repos">
-    <div class="content-wrapper">
-      <a id="github"></a>
-      <div style="background: rgba(0, 0, 0, 0);">
-        <h1>Github Repositories</h1>
-        <!-- React App for fetching github repos -->
-        <div id="repos-list-container"></div>
-      <a href="https://github.com/tylerlowrey">
-        <div class="github-button">
-          <img src="images/github.png" alt="Github Logo">
-          <p>View my GitHub Account</p>
+    <div class="spacer-orange git-repos">
+        <div class="content-wrapper">
+            <a id="github"></a>
+            <h1>Github Repositories</h1>
+            <!-- React App for fetching github repos -->
+            <div id="repos-list-container">
+                <div class="loading-container">
+                    <p class="loading-text">Loading</p>
+                </div>
+            </div>
+            <a href="https://github.com/tylerlowrey">
+                <div class="github-button">
+                    <img src="images/github.png" alt="Github Logo">
+                    <p>View my GitHub Account</p>
+                </div>
+            </a>
         </div>
-      </a>
     </div>
-  </div>
-  </div>
 
-  <div class="info-block">
+    <div class="info-block">
 
-    <div class="content-wrapper">
-      <a id="resume"></a>
-      <h1>Resume</h1>
-      <hr class="hr-resume">
+        <div class="content-wrapper">
+            <a id="resume"></a>
+            <h1>Resume</h1>
+            <hr class="hr-resume">
 
-      <!-- Beginning of Resume -->
-      <div class="resume">
+            <!-- Beginning of Resume -->
+            <div class="resume">
 
-        <div class="resume-title-section">
-          Education
+                <div class="resume-title-section">
+                    Education
+                </div>
+                <div class="resume-content-section">
+                    <span class="bold">Clemson University - B.S. Computer Science</span><br>
+                    <ul style="padding-left: 30px; list-style-type: square; margin-top: 5px;">
+                        <li>Expected Graduation: May 2020</li>
+                    </ul>
+                </div>
+                <hr class="resume-spacer">
+
+                <div class="resume-title-section">
+                    Technical Skills
+                </div>
+                <div class="resume-content-section">
+                    <ul>
+                        <li class="bold">Programming Languages: C/C++, Java, PHP, Python</li>
+                        <li>Autodesk Inventor</li>
+                        <li>Microsoft Excel</li>
+                    </ul>
+                </div>
+                <hr class="resume-spacer">
+
+
+                <div class="resume-title-section">
+                    Work Experience
+                </div>
+                <div class="resume-content-section">
+                    <ul>
+                        <li><span class="bold">IT Intern</span> - Watt Family Innovation Center at Clemson (January 2018
+                            - Present)
+                        </li>
+                        <li><span class="bold">Undergraduate Researcher</span> - PERSIST Lab at Clemson (September 2018
+                            - December 2018)
+                        </li>
+                        <li><span class="bold">Student IT Consultant</span> - Clemson Computing and Information
+                            Technology (Summer 2017, May 2018 - January 2018)
+                        </li>
+                    </ul>
+                </div>
+                <hr class="resume-spacer">
+
+                <div class="resume-title-section">
+                    Extra-curricular Experience
+                </div>
+                <div class="resume-content-section">
+                    <ul>
+                        <li>
+                            <span class="italic bold">FIRST</span> <span class="bold">FRC Robotics (Team 283)</span>
+                            <ul style="list-style-type: square;">
+                                <li>C++ Programmer (2014-2015 School year)</li>
+                                <li>Team Captain & Lead Programmer (Summer 2015 - Summer 2016)</li>
+                                <li>Controls & Programming Mentor (Fall 2016 - Present)</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <hr class="resume-spacer">
+
+                <div class="resume-title-section">
+                    Relevant Coursework
+                </div>
+                <div class="resume-content-section">
+                    <ul>
+                        <li>
+                            Clemson University (Fall 2016)
+                            <ul style="list-style-type: square;">
+                                <li>ENGR 1900 - Creative Inquiry in NXT Robotics (MATLAB)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Clemson University (Spring 2017)
+                            <ul style="list-style-type: square;">
+                                <li>ENGR 1410 - Programming and Problem Solving (MATLAB)</li>
+                                <li>CPSC 1110 - Introduction to Programming in C</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Clemson University (Spring 2018)
+                            <ul style="list-style-type: square;">
+                                <li> CPSC 1020 - Computer Science II w/ C++</li>
+                                <li> ECE 1990 - Creative Inquiry in Robot Networks (Python)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Clemson University (Summer 2018)
+                            <ul style="list-style-type: square;">
+                                <li> CPSC 2310 - Introduction to Computer Organization (ARM and C)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Clemson University (Fall 2018)
+                            <ul style="list-style-type: square;">
+                                <li> CPSC 2070 - Discrete Structures for Computing</li>
+                                <li> CPSC 2120 - Algorithms and Data Structures (C++)</li>
+                                <li> CPSC 2150 - Software Development Foundations (Java)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Clemson University (Spring 2019)
+                            <ul style="list-style-type: square;">
+                                <li> CPSC 3220 - Introduction to Operating Systems</li>
+                                <li> CPSC 3600 - Networks and Network Programming</li>
+                                <li> CPSC 3720 - Introduction to Software Engineering</li>
+                                <li> CPSC 3520 - Programming Systems</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <hr class="resume-spacer">
+            </div>
+            <!-- End of Resume -->
         </div>
-        <div class="resume-content-section">
-          <span class="bold">Clemson University - B.S. Computer Science</span><br>
-          <ul style="padding-left: 30px; list-style-type: square; margin-top: 5px;">
-            <li>Expected Graduation: May 2020</li>
-          </ul>
-        </div>
-        <hr class="resume-spacer">
-
-        <div class="resume-title-section">
-          Technical Skills
-        </div>
-        <div class="resume-content-section">
-          <ul>
-            <li class="bold">Programming Languages: C/C++, Java, PHP, Python</li>
-            <li>Autodesk Inventor</li>
-            <li>Microsoft Excel</li>
-          </ul>
-        </div>
-        <hr class="resume-spacer">
-
-
-        <div class="resume-title-section">
-          Work Experience
-        </div>
-        <div class="resume-content-section">
-          <ul>
-            <li><span class="bold">IT Intern</span> - Watt Family Innovation Center at Clemson (January 2018
-              - Present)
-            </li>
-            <li><span class="bold">Undergraduate Researcher</span> - PERSIST Lab at Clemson (September 2018
-              - December 2018)
-            </li>
-            <li><span class="bold">Student IT Consultant</span> - Clemson Computing and Information
-              Technology (Summer 2017, May 2018 - January 2018)
-            </li>
-          </ul>
-        </div>
-        <hr class="resume-spacer">
-
-        <div class="resume-title-section">
-          Extra-curricular Experience
-        </div>
-        <div class="resume-content-section">
-          <ul>
-            <li>
-              <span class="italic bold">FIRST</span> <span class="bold">FRC Robotics (Team 283)</span>
-              <ul style="list-style-type: square;">
-                <li>C++ Programmer (2014-2015 School year)</li>
-                <li>Team Captain & Lead Programmer (Summer 2015 - Summer 2016)</li>
-                <li>Controls & Programming Mentor (Fall 2016 - Present)</li>
-              </ul>
-            </li>
-
-          </ul>
-        </div>
-        <hr class="resume-spacer">
-
-        <div class="resume-title-section">
-          Relevant Coursework
-        </div>
-        <div class="resume-content-section">
-          <ul>
-            <li>
-              Clemson University (Fall 2016)
-              <ul style="list-style-type: square;">
-                <li>ENGR 1900 - Creative Inquiry in NXT Robotics (MATLAB)</li>
-              </ul>
-            </li>
-            <li>
-              Clemson University (Spring 2017)
-              <ul style="list-style-type: square;">
-                <li>ENGR 1410 - Programming and Problem Solving (MATLAB)</li>
-                <li>CPSC 1110 - Introduction to Programming in C</li>
-              </ul>
-            </li>
-            <li>
-              Clemson University (Spring 2018)
-              <ul style="list-style-type: square;">
-                <li> CPSC 1020 - Computer Science II w/ C++</li>
-                <li> ECE 1990 - Creative Inquiry in Robot Networks (Python)</li>
-              </ul>
-            </li>
-            <li>
-              Clemson University (Summer 2018)
-              <ul style="list-style-type: square;">
-                <li> CPSC 2310 - Introduction to Computer Organization (ARM and C)</li>
-              </ul>
-            </li>
-            <li>
-              Clemson University (Fall 2018)
-              <ul style="list-style-type: square;">
-                <li> CPSC 2070 - Discrete Structures for Computing</li>
-                <li> CPSC 2120 - Algorithms and Data Structures (C++)</li>
-                <li> CPSC 2150 - Software Development Foundations (Java)</li>
-              </ul>
-            </li>
-            <li>
-              Clemson University (Spring 2019)
-              <ul style="list-style-type: square;">
-                <li> CPSC 3220 - Introduction to Operating Systems</li>
-                <li> CPSC 3600 - Networks and Network Programming</li>
-                <li> CPSC 3720 - Introduction to Software Engineering</li>
-                <li> CPSC 4620 - Database Management Systems</li>
-              </ul>
-            </li>
-
-          </ul>
-        </div>
-
-        <hr class="resume-spacer">
-      </div>
-      <!-- End of Resume -->
+        <!-- End of content-wrapper -->
     </div>
-    <!-- End of content-wrapper -->
-  </div>
-  <!-- End of "pages" -->
+    <!-- End of "pages" -->
 </main>
 <!-- End of main -->
 
 
 <!-- Beginning of footer -->
 <footer>
-  <p>Copyright &copy; <?php echo date('Y'); ?> Tyler Lowrey</p>
+    <p>Copyright &copy; 2017-<span id="copyright-year"></span> Tyler Lowrey</p>
 </footer>
 <!-- End of footer -->
+
+<script type="text/javascript">
+    document.getElementById("copyright-year").innerText = (new Date()).getFullYear().toString();
+</script>
 </html>

@@ -260,6 +260,22 @@ nav a:hover {
 
 /* Styles for repos-list-container & children (React application) */
 
+.loading-container
+{
+    width: 100%;
+}
+
+.loading-text
+{
+    width: 200px;
+    height: 200px;
+    background-image: url("../images/eclipse-loading-icon.svg");
+    line-height: 200px;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+
 .App {
     width: 100%;
     display: flex;
