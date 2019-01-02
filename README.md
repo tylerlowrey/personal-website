@@ -1,4 +1,4 @@
-##personal-website
+## personal-website
 This repository houses the source code for my personal website (https://tylerlowrey.com)
 
 My website is mostly static HTML with some JavaScript based niceties added in. For the front-end 
