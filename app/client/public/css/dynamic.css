@@ -1,0 +1,9 @@
+@media screen and (min-width: 700px) {
+    nav {
+        justify-content: flex-end;
+    }
+
+    .nav-element {
+        margin: 0 10px 0 25px;
+    }
+}

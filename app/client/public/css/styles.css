@@ -9,6 +9,7 @@
 ===================================================================*/
 html {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -18,6 +19,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: system-ui, sans-serif;
+}
+
+p {
+    margin: 0;
 }
 
 a {
@@ -33,6 +38,20 @@ a {
 .icon {
     width: 32px;
     height: 32px;
+}
+
+.content-section {
+    width: 100%;
+    background: #FFF;
+}
+
+h1 {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr {
+    margin: 0;
 }
 
 /* Header Styles
@@ -62,7 +81,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
+    min-height: 600px;
 }
 
 .personal-photo {
@@ -71,11 +90,12 @@ nav {
     border-radius: 50%;
     border: 4px solid #FFF;
     box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, .5);
-    margin: 30px 0 15px 0;
+    margin: -15px 0 15px 0;
 }
 
 #main-info-card {
     width: 95%;
+    max-width: 600px;
     padding: 5px;
     background: #FFF;
     border-radius: 5px;
@@ -83,10 +103,168 @@ nav {
     box-shadow: 0 3px 1px rgba(50,50,93,.25);
 }
 
+#main-info-card {
+    text-align: center;
+}
+
+#linkedin-button {
+    display: flex;
+    width: 300px;
+    margin: 10px auto 15px auto;
+    padding: 8px 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-image: linear-gradient(#C7C7C7, #CCC);
+}
+
+#linkedin-button:hover {
+    box-shadow: 0 1px 1px #000;
+}
+
+#linkedin-button img {
+    margin-right: 10px;
+}
+
+#about-me-section {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-me-top {
+    max-width: 600px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 28px;
+}
+
+#about-me-bottom {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#about-me-bottom img {
+    width: 300px;
+    height: auto;
+    max-height: 300px;
+    max-width: 48%;
+    border-radius: 5px;
+}
+
 /* React App/Github Repo List Styles
 ---------------------------------------*/
+.loading-container
+{
+    width: 100%;
+}
 
+.loading-text
+{
+    width: 200px;
+    height: 200px;
+    background-image: url("../images/eclipse-loading-icon.svg");
+    line-height: 200px;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+
+#github-repo-list h1 {
+    color: #FFF;
+}
+
+.App {
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 0 auto 20px auto;
+}
+
+.github-repo-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: #FFF;
+    width: 325px;
+    min-height: 150px;
+    box-sizing: border-box;
+    color: #000;
+    border-radius: 3px;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0;
+    box-shadow: 0 1px 1px rgba(50,50,93,.25);
+    border: 1px solid rgba(50,50,93,.25);
+}
+
+.github-repo-box p {
+    font-size: 0.85em;
+}
+
+.github-repo-box a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.github-repo-box a:hover
+{
+    color: #CCCCCC;
+}
+
+.github-repo-language {
+    margin-bottom: 0;
+}
+
+#github-button {
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    margin: 10px auto 15px auto;
+    padding: 8px 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: #FFF;/*linear-gradient(#C7C7C7, #CCC);*/
+    box-shadow: -1px 0px 1px rgba(50,50,93,.25)
+}
+
+#github-button:hover {
+    box-shadow: 0 1px 3px #000;
+}
+
+#github-button img {
+    margin-right: 10px;
+}
+
+/* Resume Styles
+---------------------------------------*/
+#resume-section {
+    padding: 20px 20px 25px 20px;
+}
+
+#resume-section h1 {
+    margin: 0;
+}
+
+#resume-section hr {
+    max-lwidth: 750px;
+    margin: 0 auto;
+    height: 1px;
+    background: #AAA;
+    border: none;
+}
 
 /* Footer Styles
 ===================================================================*/
+footer #footer-copyright {
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; /* Fixes weird right hand margin that messes with page width */
+    width: 100%;
+}
 
