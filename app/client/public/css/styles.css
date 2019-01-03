@@ -1,22 +1,23 @@
 /*
- * Styles for my personal website:
- * tylerlowrey.com
- *
+ * Styles for my personal website: tylerlowrey.com
+ * Author: Tyler Lowrey
+ * License: GPL
  */
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
-/* Global styles
-==============================*/
-html, body {
-    width: 100%;
+/* Global Styles
+===================================================================*/
+html {
     height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    background: #CCC;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 25px 0;
+body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(#0C71ED, #338FFF);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: system-ui, sans-serif;
 }
 
 a {
@@ -24,370 +25,68 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Squada One', cursive;
-    font-weight: 400;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.shaded-bg {
-    text-align: center;
-    color: #FFF;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 10px;
-    margin: 20px auto;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.spacer-orange {
-    background: #F66733;
-    overflow: auto;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.spacer-orange .content-wrapper {
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.spacer-orange .content-wrapper .shaded-bg {
-    flex-basis: 0;
-}
-
-.spacer-purple {
-    background: #522D80;
-    height: 200px;
-    display: block;
-    width: 100%;
-}
-
-.content-wrapper {
-    margin: 0 auto;
-    width: 98%;
-}
-
-.under-construction {
-    display: none;
-    padding: 15px;
-    border-radius: 4px;
-    max-width: 98%;
-    margin: 10px auto 25px auto;
-    background: #FFD500;
-    color: black;
-    box-shadow: 0px 0px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-    font-size: .75em;
-}
-
-.under-construction * {
-    margin: 0;
-}
-
 .error {
     color: #cd0004;
     font-weight: bold;
 }
 
-/* Header styles
-===============================*/
-header {
-    background: #08161F;
-    color: white;
-    text-align: center;
-    padding-top: 10px;
+.icon {
+    width: 32px;
+    height: 32px;
 }
 
-#header-text {
-    font-family: 'Squada One', cursive;
-    font-size: 48px;
-    margin: 10px;
-    margin-top: 0;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav ul li {
-    border-bottom: 1px solid #283C47;
-    background: #1F2F38;
-}
-
-nav ul li:last-of-type {
-    border-bottom: none;
-}
-
-nav a {
-    display: block;
+/* Header Styles
+===================================================================*/
+nav {
+    display: flex;
+    justify-content: space-around;
     padding: 10px;
+    font-size: 1.1em;
 }
 
-nav a:hover {
-    background: #283C47;
+.nav-element {
+    text-shadow: 1px 1px rgba(0, 0, 0, .25);
+    color: #FFF;
+}
+
+.nav-element:hover
+{
+    text-decoration: underline;
 }
 
 
-/* Content styles
-============================*/
+/* Main/Content Styles
+===================================================================*/
 #main-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(0deg, #522D80, #3C215E);
-    min-height: 500px;
-    width: 100%;
-    color: #ececec;
-    text-align: center;
-    padding-top: 20px;
-}
-
-#main-info .flex-parent {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    min-height: 500px;
 }
 
-#photo-of-me {
+.personal-photo {
     max-height: 150px;
     max-width: 150px;
     border-radius: 50%;
     border: 4px solid #FFF;
     box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, .5);
-
+    margin: 30px 0 15px 0;
 }
 
-.linkedin-button {
-    max-width: 315px;
+#main-info-card {
+    width: 95%;
     padding: 5px;
-    margin: 0 auto;
+    background: #FFF;
     border-radius: 5px;
-    box-shadow: 0px 0px 1.5px 1.5px rgba(0, 0, 0, .5);
-    background: #0B1D29;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, .25);
+    box-shadow: 0 3px 1px rgba(50,50,93,.25);
 }
 
-.linkedin-button:hover {
-    background: #283C47;
-}
+/* React App/Github Repo List Styles
+---------------------------------------*/
 
-.linkedin-button img {
-    width: 32px;
-    height: 32px;
-}
 
-.linkedin-button p {
-    margin: 0 5px;
-}
+/* Footer Styles
+===================================================================*/
 
-.info-block {
-    padding: 20px;
-}
-
-.info-block.about-me {
-    text-align: justify;
-    line-height: 1.5em;
-}
-
-/* Github repos section */
-.github-button {
-    color: #fff;
-    max-width: 315px;
-    padding: 5px;
-    margin: 0 auto;
-    border-radius: 5px;
-    box-shadow: 0px 0px 1px 1.5px rgba(0, 0, 0, .85);
-    background: #0B1D29;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.github-button:hover {
-    background: #283C47;
-}
-
-.github-button img {
-    width: 32px;
-    height: 32px;
-}
-
-.github-button p {
-    margin: 0 5px;
-}
-
-.git-repo-box {
-    text-align: center;
-}
-
-.git-repo-box img {
-    height: 250px;
-    width: 250px;
-    border-radius: 10px;
-}
-
-.github-link {
-    background: #1F2F38;
-    border-radius: 5px;
-    box-shadow: 0px 0px 1.5px 1.5px rgba(0, 0, 0, .5);
-    padding: 10px;
-    color: #FFF;
-    text-align: center;
-    display: block;
-    width: 200px;
-    margin: 0 auto;
-}
-
-.github-link:hover {
-    background: #283C47;
-}
-
-/* Styles for repos-list-container & children (React application) */
-
-.loading-container
-{
-    width: 100%;
-}
-
-.loading-text
-{
-    width: 200px;
-    height: 200px;
-    background-image: url("../images/eclipse-loading-icon.svg");
-    line-height: 200px;
-    text-align: center;
-    font-size: 1.2em;
-    margin: 0 auto;
-}
-
-.App {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex-direction: row;
-    margin-bottom: 20px;
-}
-
-.github-repo-box {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    background: #1F2F38;
-    width: 325px;
-    box-sizing: border-box;
-    color: #FFF;
-    border-radius: 5px;
-    padding: 10px 10px 10px 10px;
-    margin: 10px 0;
-    box-shadow: 0 1px 1px #000;
-    border: 1px solid #0a121a;
-}
-
-.github-repo-box p {
-    font-size: 0.85em;
-}
-
-.github-repo-box a {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.github-repo-box a:hover
-{
-    color: #CCCCCC;
-}
-
-.github-repo-language {
-    margin-bottom: 0;
-}
-
-/* Styles for Resume section */
-hr.resume-spacer {
-    clear: both;
-    margin: 10px 0;
-}
-
-.hr-resume {
-    border: none;
-    text-align: center;
-    height: 2px;
-    background: #08161F;
-    width: 100%;
-}
-
-/* .hr-resume:after {
-	display: inline-block;
-	position: relative;
-	top: -13px;
-	padding: 0 10px;
-  background: #CCC;
-	color: #1F2F38;
-	font-size: 24px;
-
-} */
-
-.resume-title-section, .resume-content-section {
-    padding: 10px;
-    float: left;
-    min-height: 75px;
-}
-
-.resume-title-section {
-    padding-left: 10px;
-    width: 30%;
-    font-weight: bold;
-    box-sizing: border-box;
-}
-
-.resume-content-section {
-    padding-left: 25px;
-    padding-right: 0;
-    width: 70%;
-    box-sizing: border-box;
-}
-
-.resume ul {
-    margin: 0;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.resume ul li {
-    padding-bottom: 5px;
-}
-
-.resume ul ul {
-    padding-left: 30px;
-}
-
-/* Footer styles
-===========================*/
-footer {
-    background: #08161F;
-    border-top: 1px solid lightgrey;
-    text-align: center;
-    color: gray;
-    margin-top: 40px;
-    padding: 20px;
-}
-
-footer p {
-    margin: 0;
-}
