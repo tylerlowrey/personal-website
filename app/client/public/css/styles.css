@@ -1,9 +1,10 @@
 /*
  * Styles for my personal website: tylerlowrey.com
  * Author: Tyler Lowrey
- * License: GPL
+ * License: GPLv3
  */
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400');
 
 /* Global Styles
 ===================================================================*/
@@ -64,8 +65,11 @@ nav {
 }
 
 .nav-element {
-    text-shadow: 1px 1px rgba(0, 0, 0, .25);
+    text-shadow: 0 1px 1px rgba(50,50,93,.25);
     color: #FFF;
+    font-size: 1.1em;
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .nav-element:hover
@@ -94,7 +98,7 @@ nav {
 }
 
 #main-info-card {
-    width: 95%;
+    width: 90%;
     max-width: 600px;
     padding: 5px;
     background: #FFF;
@@ -127,7 +131,7 @@ nav {
 }
 
 #about-me-section {
-    padding: 10px;
+    padding: 10px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,20 +252,37 @@ nav {
 }
 
 #resume-section h1 {
-    margin: 0;
+    margin: 0 0 10px 0;
+}
+
+#resume-section a {
+    text-align: center;
+    color: #0000EE;
+}
+
+#resume-section a:hover {
+    text-decoration: underline;
 }
 
 #resume-section hr {
-    max-lwidth: 750px;
-    margin: 0 auto;
+    max-width: 750px;
+    margin: 10px auto 0 auto;
     height: 1px;
     background: #AAA;
     border: none;
 }
 
+.resume-pdf-view
+{
+    max-width: 750px;
+    margin: 10px auto;
+    box-shadow: 0 1px 1px rgba(50,50,93,.25);
+}
+
 /* Footer Styles
 ===================================================================*/
 footer #footer-copyright {
+    color: #ccc;
     padding: 10px;
     text-align: center;
     box-sizing: border-box; /* Fixes weird right hand margin that messes with page width */

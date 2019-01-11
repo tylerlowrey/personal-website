@@ -87,7 +87,9 @@
         <div class="content-section">
             <div id="resume-section">
                 <h1>Resume</h1>
+                <a href="resume.pdf"><p>Download a PDF of my Resume</p></a>
                 <hr>
+                <div class="resume-pdf-view"></div>
             </div>
         </div>
 
@@ -99,10 +101,21 @@
         </div>
     </footer>
 </div>
-</body>
+
+<script src='js/pdfobject.min.js'></script>
+<script>
+    //Be sure your document contains an element with the CSS selector "resume-pdf-view"
+    var options = {
+        fallbackLink: '<p>This browser does not support inline PDFs. Please select "Download a PDF of my Resume" above to view it.</p>'
+    };
+
+    PDFObject.embed("https://tylerlowrey.com/resume.pdf", ".resume-pdf-view", options);
+</script>
 
 <script type="text/javascript">
     document.getElementById("copyright-year").innerText = (new Date()).getFullYear().toString();
 </script>
+
+</body>
 
 </html>
