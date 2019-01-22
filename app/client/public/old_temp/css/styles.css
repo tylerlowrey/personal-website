@@ -396,3 +396,8 @@ footer {
 footer p {
     margin: 0;
 }
+
+footer a {
+    text-decoration: underline;
+    color: #1F2F38;
+}

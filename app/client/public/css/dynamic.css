@@ -1,4 +1,15 @@
 @media screen and (min-width: 700px) {
+
+    body {
+        background-image: url("../images/Halftone-background/halftone-bg-wide-x-large-02.png");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .html-mobile-background {
+        display: none;
+    }
+
     nav {
         justify-content: flex-end;
     }
