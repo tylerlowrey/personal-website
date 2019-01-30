@@ -18,7 +18,7 @@ class App extends Component
      * @param username - The username to grab public repos from, (https://github.com/USERNAME)
      */
     fetchPublicRepos = (username) => {
-        return axios.get(`https://team283.org:8080/public_repos/${username}`);
+        return axios.get(`https://tylerlowrey.com/api/public_repos/${username}`);
     };
 
     componentDidMount()

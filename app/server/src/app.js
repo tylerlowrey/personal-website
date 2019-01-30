@@ -1,6 +1,7 @@
 import secret from './secret';
 import express from 'express';
 import https from 'https';
+import http from 'http';
 import fs from 'fs';
 import axios from 'axios';
 
@@ -9,13 +10,14 @@ var sslOptions = {
     cert: fs.readFileSync(secret.ssl_cert)
 }
 
-const app = express();
-const port = 8080;
+const https_app = express();
+const http_port = 80;
+const https_port = 443;
 
 
-app.get('/public_repos/:username', (req, res) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+https_app.use(express.static(__dirname + '/../../client/build'));
+
+https_app.get('/api/public_repos/:username', (req, res) => {
     axios.get(`https://api.github.com/users/${req.params.username}/repos?type=owner&sort=update&access_token=${secret.api_key}`)
         .then(result => {
             res.json(result.data);
@@ -27,7 +29,18 @@ app.get('/public_repos/:username', (req, res) => {
         });
 });
 
-https.createServer(sslOptions, app).listen(port, () => console.log(`Git Repo List app listening on port ${port}!`));
+https.createServer(sslOptions, https_app).listen(https_port, () => {
+    console.log(`Website app listening on port ${https_port}!`);
+});
 
+const http_app = express();
 
+//Redirect all traffic to https
+http_app.get('*', (req, res) => {
+    res.redirect('https://' + req.headers.host + req.url);
+});
+
+http.createServer(http_app).listen(http_port, () => {
+    console.log("Redirecting all traffic on port 80 to port 443 (https)");
+});
 
