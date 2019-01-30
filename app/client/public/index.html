@@ -21,9 +21,9 @@
 <div id="page-wrapper">
     <header>
         <nav id="main-nav">
-            <a href="#about-me" class="nav-element">About Me</a>
-            <a href="#github" class="nav-element">My Github</a>
-            <a href="#resume" class="nav-element">Resume</a>
+            <a href="#about-me" class="nav-element js-scroll-trigger">About Me</a>
+            <a href="#github" class="nav-element js-scroll-trigger">My Github</a>
+            <a href="#resume" class="nav-element js-scroll-trigger">Resume</a>
         </nav>
     </header>
 
@@ -35,7 +35,7 @@
                 <h2>Tyler Lowrey</h2>
                 <p>(864) 430-9152 | tlowrey@g.clemson.edu</p>
                 <h3>IT Intern - Clemson University Watt Center</h3>
-                <h3>Computer Science Undergraduate, Clemson University</h3>
+                <h3>Computer Science (B.S.) Undergraduate, Clemson University</h3>
                 <a href="https://linkedin.com/in/tylerlowrey" id="linkedin-button">
                     <img src="images/linkedin.png" alt="LinkedIn logo (Link to my LinkedIn Account)" class="icon">
                     <p>View my LinkedIn&reg; Account</p>
@@ -104,8 +104,15 @@
     </footer>
 </div>
 
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="js/scroll.js"></script>
 <script src='js/pdfobject.min.js'></script>
 <script>
+    //Auto-update copyright year
+
     //Be sure your document contains an element with the CSS selector "resume-pdf-view"
     var options = {
         fallbackLink: '<p>This browser does not support inline PDFs. Please select "Download a PDF of my Resume" above to view it.</p>'
