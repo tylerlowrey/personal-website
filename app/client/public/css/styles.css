@@ -28,7 +28,7 @@ body {
     width: 100%;
     height: 125%; /* To compensate for mobile browser address bar space */
     /* Note: This is just the mobile version of the background, dynamic.css has the desktop/non-mobile image css */
-    background: url("../images/Halftone-background/halftone-bg-mobile-long-01.png") no-repeat;
+    background: url("../images/Halftone-background/bg-wide-02.svg") no-repeat;
     background-size: 100% 100%;
 }
 
