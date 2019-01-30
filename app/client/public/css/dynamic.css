@@ -1,7 +1,7 @@
 @media screen and (min-width: 700px) {
 
     body {
-        background-image: url("../images/Halftone-background/halftone-bg-wide-x-large-02.png");
+        background-image: url("../images/Halftone-background/halftone-bg-x-large-02.svg");
         background-size: cover;
         background-attachment: fixed;
     }
