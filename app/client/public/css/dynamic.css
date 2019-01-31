@@ -1,7 +1,7 @@
 @media screen and (min-width: 700px) {
 
     body {
-        background-image: url("../images/Halftone-background/halftone-bg-x-large-02.svg");
+        background: linear-gradient(to bottom right, rgb(125, 237, 250), rgb(52, 42, 184)) no-repeat;
         background-size: cover;
         background-attachment: fixed;
     }
