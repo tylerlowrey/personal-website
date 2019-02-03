@@ -28,7 +28,8 @@ body {
     width: 100%;
     height: 125%; /* To compensate for mobile browser address bar space */
     /* Note: This is just the mobile version of the background, dynamic.css has the desktop/non-mobile image css */
-    background: linear-gradient(to bottom right, rgb(125, 237, 250), rgb(52, 42, 184)) no-repeat;
+    background: linear-gradient(to bottom right, rgb(51,255,255), rgb(51,0,153)) no-repeat;
+    /* rgb(125, 237, 250) - rgb(52, 42, 184) */
     background-size: 100% 100%;
 }
 
