@@ -2,7 +2,7 @@
 
     body {
         /* background: linear-gradient(to bottom right, rgb(125, 237, 250), rgb(52, 42, 184)) no-repeat; */
-        background: linear-gradient(to bottom right, rgb(51,255,255), rgb(51,0,153)) no-repeat;
+        background: linear-gradient(to bottom right, #21d4fd, #b721ff) no-repeat;
         background-size: cover;
         background-attachment: fixed;
     }
