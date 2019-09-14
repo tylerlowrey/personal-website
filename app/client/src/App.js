@@ -5,6 +5,8 @@ import Repo from './components/Repo';
 class App extends Component
 {
 
+    BASE_API_URL = "https://tylerlowrey.com/api";
+
     MAX_REPOS_TO_LIST = 10;
 
     state = {
@@ -17,8 +19,15 @@ class App extends Component
      *
      * @param username - The username to grab public repos from, (https://github.com/USERNAME)
      */
-    fetchPublicRepos = (username) => {
-        return axios.get(`https://tylerlowrey.com/api/public_repos/${username}`);
+    fetchPublicRepos = (username, opts) => {
+
+        if(opts === "undefined" || opts["show_organization_repos"] === false)
+            return axios.get(`${this.BASE_API_URL}/public_repos/${username}`);
+        else if (opts["show_organization_repos"] === true)
+            return axios.get(`${this.BASE_API_URL}/public_repos/${username}/`);
+        else
+            throw "No valid options were provided in call to fetchPublicRepos";
+
     };
 
     componentDidMount()
@@ -31,13 +40,13 @@ class App extends Component
                 });
             })
             .catch(error => {
-                console.log("BAD", error);
+                console.log("ERROR: ", error);
                 this.setState({
                     repos: [
                         {
                             name: "Error",
                             id: "-404",
-                            description: "There was an error communicating with the Github API. " +
+                            description: "There was an error while trying to communicate with the Github API. " +
                             "You can click on the link below to visit my Github.",
                             error: true,
                             html_url: "https://github.com/tylerlowrey"
