@@ -1,0 +1,19 @@
+@media screen and (min-width: 700px) {
+
+    body {
+        /* background: linear-gradient(to bottom right, rgb(125, 237, 250), rgb(52, 42, 184)) no-repeat; */
+    }
+
+    .html-mobile-background {
+        display: none;
+    }
+
+    nav {
+        justify-content: flex-end;
+    }
+
+    .nav-element {
+        margin: 0 10px 0 25px;
+        font-weight: 400;
+    }
+}

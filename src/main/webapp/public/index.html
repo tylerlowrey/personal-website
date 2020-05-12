@@ -1,0 +1,123 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title>Tyler Lowrey</title>
+    <!-- Page styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- Dynamic styles (media queries) -->
+    <link rel="stylesheet" type="text/css" href="css/dynamic.css">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="The personal website of Tyler Lowrey, a computer programmer from South Carolina.">
+    <meta name="keywords" content="Tyler, Lowrey, Robotics, FRC, Clemson, Computer Science, Clemson University">
+    <meta name="author" content="Tyler Lowrey">
+
+
+</head>
+<body>
+<div class="html-mobile-background"></div>
+<div id="page-wrapper">
+    <header>
+        <nav id="main-nav">
+            <a href="#about-me" class="nav-element js-scroll-trigger">About Me</a>
+            <a href="#github" class="nav-element js-scroll-trigger">My Github</a>
+            <a href="#resume" class="nav-element js-scroll-trigger">Resume</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="main-info">
+            <img src="images/me.png" alt="Photo of Tyler Lowrey" class="personal-photo">
+            <div id="main-info-card" class="content-card">
+                <a id="top"></a>
+                <h2>Tyler Lowrey</h2>
+                <h3>Computer Science (B.S.) Undergraduate, Clemson University</h3>
+                <a href="https://linkedin.com/in/tylerlowrey" id="linkedin-button">
+                    <img src="images/linkedin.png" alt="LinkedIn logo (Link to my LinkedIn Account)" class="icon">
+                    <p>View my LinkedIn&reg; Account</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div id="about-me-section">
+                <a id="about-me"></a>
+                <div id="about-me-top">
+                    <h1>About Me</h1>
+                    <p>
+                        Hello! My name is Tyler Lowrey. I am currently a senior in Computer
+                        Science at Clemson University.
+                        I work on a multitude of programming projects, some of which can be
+                        viewed on my github (displayed below). I enjoy spending free time learning new skills in all sorts of subjects.
+                        I am also a programming mentor for <i>FIRST</i> Robotics Competition
+                        (FRC) Team 283, which is based out of Wade Hampton High School in Greenville,
+                        South Carolina.
+                    </p>
+                </div>
+                <div id="about-me-bottom">
+                    <img src="images/pic-of-me-stella.jpg" alt="Picture of Tyler Lowrey">
+                    <img src="images/283-robot.jpg" alt="Picture of FRC Team 283's 2016 robot">
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div id="github-repo-list">
+            <a id="github"></a>
+            <h1>Github Repositories</h1>
+
+            <div id="repos-app-container">
+                <div class="loading-container">
+                    <p class="loading-text">Loading</p>
+                </div>
+            </div>
+
+            <a href="https://github.com/tylerlowrey" id="github-button">
+                    <img src="images/github.png" alt="Github Logo" class="icon">
+                    <p>View my GitHub Account</p>
+            </a>
+        </div>
+
+
+        <div class="content-section">
+            <div id="resume-section">
+                <a id="resume"></a>
+                <h1>Resume</h1>
+                <a href="resume.pdf"><p>Download a PDF of my Resume</p></a>
+                <hr>
+                <div class="resume-pdf-view"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="content-section">
+            <p id="footer-copyright">Copyright &copy; 2017-<span id="copyright-year"></span> Tyler Lowrey.</p>
+        </div>
+    </footer>
+</div>
+
+<script src='js/pdfobject.min.js'></script>
+<script>
+
+
+    let options = {
+        fallbackLink: '<p>This browser does not support inline PDFs. Please select "Download a PDF of my Resume" above to view it.</p>'
+    };
+
+    PDFObject.embed("https://tylerlowrey.com/resume.pdf", ".resume-pdf-view", options);
+</script>
+
+<script type="text/javascript">
+    //Auto-update copyright year
+    document.getElementById("copyright-year").innerText = (new Date()).getFullYear().toString();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.repo-list-container
+{
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 0 auto 20px auto;
+    align-items: center;
+}
