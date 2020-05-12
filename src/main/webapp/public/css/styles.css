@@ -19,6 +19,9 @@ body {
     height: 100%;
     margin: 0;
     font-family: system-ui, sans-serif;
+    background: linear-gradient(45deg, #06617D 0 50%, #003366 50%) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .html-mobile-background {
     position: fixed;
@@ -28,7 +31,7 @@ body {
     width: 100%;
     height: 125%; /* To compensate for mobile browser address bar space */
     /* Note: This is just the mobile version of the background, dynamic.css has the desktop/non-mobile image css */
-    background: linear-gradient(to bottom right, #21d4fd, #b721ff) no-repeat;
+    background: linear-gradient(45deg, #06617D 0 50%, #003366 50%) no-repeat;
     /* rgb(125, 237, 250) - rgb(52, 42, 184) */
     background-size: 100% 100%;
 }
@@ -239,7 +242,7 @@ nav {
     display: flex;
     flex-direction: row;
     width: 300px;
-    margin: 10px auto 15px auto;
+    margin: 20px auto 15px auto;
     padding: 8px 5px;
     align-items: center;
     justify-content: center;

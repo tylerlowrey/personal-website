@@ -1,10 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import RepoList from "./Components/RepoList";
+import {REPO_SERVICE_API_URL} from "./constants";
 
 function App() {
   return (
-    <RepoList />
+    <RepoList reposApiEndpointUrl={REPO_SERVICE_API_URL + "/repos"}/>
   );
 }
 
