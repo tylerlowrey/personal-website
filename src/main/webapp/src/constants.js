@@ -1,1 +1,1 @@
-export const REPO_SERVICE_API_URL = "http://18.214.169.248:8000";
+export const REPO_SERVICE_API_URL = "https://dev.tylerlowrey.com:8000";

@@ -9,11 +9,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        /* Enable HTTPS
         http.requiresChannel()
             .anyRequest()
             .requiresSecure();
-         */
         //TODO: Re-enable csrf and cors
         http.csrf().disable().cors().disable().authorizeRequests().anyRequest().permitAll();
     }
