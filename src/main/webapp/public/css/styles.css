@@ -3,8 +3,7 @@
  * Author: Tyler Lowrey
  * License: GPLv3
  */
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto:wght@400;700&display=swap');
 
 /* Global Styles
 ===================================================================*/
@@ -18,11 +17,12 @@ html {
 body {
     height: 100%;
     margin: 0;
-    font-family: system-ui, sans-serif;
-    background: linear-gradient(45deg, #06617D 0 50%, #003366 50%) no-repeat;
+    font-family: "PT Mono", monospace, sans-serif;
+    background: linear-gradient(15deg, #06617D 0 50%, #003366 50%) no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+
 .html-mobile-background {
     position: fixed;
     z-index: -1;
@@ -31,7 +31,7 @@ body {
     width: 100%;
     height: 125%; /* To compensate for mobile browser address bar space */
     /* Note: This is just the mobile version of the background, dynamic.css has the desktop/non-mobile image css */
-    background: linear-gradient(45deg, #06617D 0 50%, #003366 50%) no-repeat;
+    background: linear-gradient(30deg, #06617D 0 50%, #003366 50%) no-repeat;
     /* rgb(125, 237, 250) - rgb(52, 42, 184) */
     background-size: 100% 100%;
 }
@@ -61,8 +61,12 @@ a {
 }
 
 h1 {
-    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     text-align: center;
+}
+
+p {
+    font-family: 'PT Mono', monospace;
 }
 
 hr {
@@ -71,8 +75,22 @@ hr {
 
 /* Header Styles
 ===================================================================*/
-nav {
+header {
     display: flex;
+    position: fixed;
+    background: #003366;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+    top: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav {
+    display: none;
     justify-content: space-around;
     padding: 10px;
     font-size: 1.1em;
@@ -81,9 +99,10 @@ nav {
 .nav-element {
     text-shadow: 0 1px 1px rgba(50,50,93,.25);
     color: #FFF;
-    font-size: 1.1em;
+    font-size: 1em;
+    margin: 0 15px;
     font-weight: 400;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'PT Mono', monospace;
 }
 
 .nav-element:hover
@@ -94,55 +113,45 @@ nav {
 
 /* Main/Content Styles
 ===================================================================*/
-#main-info {
+#main-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.main-info-content {
+    color: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     min-height: 600px;
+}
+
+.main-info-content h2 {
+    text-decoration: underline;
+    font-size: 1.8em;
+    font-weight: 700;
 }
 
 .personal-photo {
     max-height: 150px;
     max-width: 150px;
-    border-radius: 50%;
-    border: 4px solid #FFF;
-    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, .5);
-    margin: -15px 0 15px 0;
+    border: 2px solid #FFF;
 }
 
-#main-info-card {
-    width: 90%;
-    max-width: 600px;
-    padding: 5px;
-    background: #FFF;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, .25);
-    box-shadow: 0 3px 1px rgba(50,50,93,.25);
+.social-media-icons {
+    margin-top: 15px;
 }
 
-#main-info-card {
-    text-align: center;
+.social-media-icons img {
+    margin-right: 8px;
 }
 
-#linkedin-button {
-    display: flex;
-    width: 300px;
-    margin: 10px auto 15px auto;
-    padding: 8px 5px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    background-image: linear-gradient(#C7C7C7, #CCC);
-}
 
-#linkedin-button:hover {
-    box-shadow: 0 1px 1px #000;
-}
-
-#linkedin-button img {
-    margin-right: 10px;
-}
+/* About Me section
+---------------------------------------*/
 
 #about-me-section {
     padding: 10px 25px;
@@ -158,6 +167,12 @@ nav {
     line-height: 28px;
 }
 
+#about-me-top h1 {
+    font-size: 1.6em;
+    text-align: left;
+    text-decoration: underline;
+}
+
 #about-me-bottom {
     text-align: center;
     margin-bottom: 25px;
@@ -168,7 +183,7 @@ nav {
     height: auto;
     max-height: 300px;
     max-width: 48%;
-    border-radius: 5px;
+    border: 2px solid #000;
 }
 
 /* React App/Github Repo List Styles
@@ -191,6 +206,9 @@ nav {
 
 #github-repo-list h1 {
     color: #FFF;
+    text-align: left;
+    font-size: 1.6em;
+    text-decoration: underline;
 }
 
 .App {
@@ -209,23 +227,37 @@ nav {
     flex-direction: column;
     background: #FFF;
     width: 325px;
-    min-height: 150px;
+    min-height: 175px;
     box-sizing: border-box;
     color: #000;
-    border-radius: 3px;
     padding: 10px 10px 10px 10px;
     margin: 10px 0;
     box-shadow: 0 1px 1px rgba(50,50,93,.25);
     border: 1px solid rgba(50,50,93,.25);
+    font-family: 'PT Mono', monospace;
+}
+
+.github-repo-box-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.github-repo-box-header a img {
+    width: 25px;
 }
 
 .github-repo-box p {
     font-size: 0.85em;
 }
 
-.github-repo-box a {
-    text-decoration: underline;
-    font-weight: bold;
+.github-repo-box h2 {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
 }
 
 .github-repo-box a:hover
